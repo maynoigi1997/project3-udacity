@@ -21,3 +21,53 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8080
+        env:
+        - name: POSTGRES_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: backend-cm
+              key: POSTGRES_HOST
+        - name: POSTGRES_DB
+          valueFrom:
+            configMapKeyRef:
+              name: backend-cm
+              key: POSTGRES_DB
+        - name: AWS_BUCKET
+          valueFrom:
+            configMapKeyRef:
+              name: backend-cm
+              key: AWS_BUCKET
+        - name: AWS_REGION
+          valueFrom:
+            configMapKeyRef:
+              name: backend-cm
+              key: AWS_REGION
+        - name: AWS_PROFILE
+          valueFrom:
+            configMapKeyRef:
+              name: backend-cm
+              key: AWS_PROFILE
+        - name: JWT_SECRET
+          valueFrom:
+            configMapKeyRef:
+              name: backend-cm
+              key: JWT_SECRET
+        - name: POSTGRES_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: backend-secret
+              key: POSTGRESS_USERNAME
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: backend-secret
+              key: POSTGRESS_PASSWORD
+        volumeMounts:
+          - name: aws-secret
+            mountPath: "/root/.aws/"
+            readOnly: true        
+        restartPolicy: Always
+        volumes:
+        - name: aws-secret
+          secret:
+            secretName: aws-secret

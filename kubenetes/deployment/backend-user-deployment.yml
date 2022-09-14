@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-user
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-user
+  template:
+    metadata:
+      labels:
+        app: backend-user
+    spec:
+      containers:
+      - name: backend-user
+        image: letanhai1998/udagram-api-user:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

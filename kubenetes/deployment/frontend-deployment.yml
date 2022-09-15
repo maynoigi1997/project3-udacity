@@ -16,7 +16,10 @@ spec:
         image: letanhai1998/udagram-frontend:v1
         resources:
           limits:
-            memory: "128Mi"
+            memory: "1024Mi"
             cpu: "500m"
+        envFrom:
+          - configMapRef:
+              name: backend-cm
         ports:
-        - containerPort: 8100
+        - containerPort: 80

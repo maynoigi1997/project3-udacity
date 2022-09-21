@@ -8,4 +8,4 @@ export AWS_BUCKET=uda-proj3-bucket
 export AWS_REGION=us-east-1
 export AWS_PROFILE=tunva
 export JWT_SECRET=testing
-export URL=http://localhost:8100
+export URL=http://localhost:81

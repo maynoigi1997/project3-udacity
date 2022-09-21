@@ -1,2 +1,2 @@
 set_env.sh
-./kubenetes/environment/*
+./kubenetes/environment/aws-secret.yml

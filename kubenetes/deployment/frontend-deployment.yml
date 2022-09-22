@@ -14,6 +14,7 @@ spec:
       containers:
       - name: frontend-app
         image: maynoigi1997/udagram-frontend:v2
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "128Mi"

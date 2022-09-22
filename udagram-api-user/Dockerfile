@@ -5,6 +5,7 @@ ENV POSTGRES_USERNAME postgres
 ENV POSTGRES_PASSWORD password
 ENV POSTGRES_DB udagram 
 ENV POSTGRES_HOST localhost 
+ENV NODE_OPTIONS=--max-old-space-size=8192
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied where available (npm@5+)
 COPY package*.json ./

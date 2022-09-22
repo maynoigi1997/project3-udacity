@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: reserseproxy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: reserseproxy
@@ -17,7 +17,7 @@ spec:
         image: letanhai1998/udagram-reverseproxy
         resources:
           limits:
-            memory: "1024Mi"
+            memory: "512Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080

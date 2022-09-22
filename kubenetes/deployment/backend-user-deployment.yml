@@ -15,6 +15,7 @@ spec:
       containers:
       - name: backend-user
         image: letanhai1998/udagram-api-user:v1
+        imagePullPolicy: Always
         ports:
           - containerPort: 8080
         resources:

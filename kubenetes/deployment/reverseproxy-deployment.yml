@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: reserseproxy
-        image: letanhai1998/udagram-reverseproxy
+        image: maynoigi1997/udagram-reverseproxy
         resources:
           limits:
             memory: "512Mi"

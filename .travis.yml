@@ -12,22 +12,22 @@ script:
   # Build docker image for reverseproxy
   - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   # Tagging for api-feed
-  - docker tag udagram-api-feed letanhai1998/udagram-api-feed:v1
+  - docker tag udagram-api-feed maynoigi1997/udagram-api-feed:v1
   # Tagging for api-user
-  - docker tag udagram-api-user letanhai1998/udagram-api-user:v1
+  - docker tag udagram-api-user maynoigi1997/udagram-api-user:v1
   # Tagging for api-frontend
-  - docker tag udagram-frontend letanhai1998/udagram-frontend:v1
+  - docker tag udagram-frontend maynoigi1997/udagram-frontend:v1
   # Tagging for api-reverseproxy
-  - docker tag udagram-reverseproxy letanhai1998/udagram-reverseproxy
+  - docker tag udagram-reverseproxy maynoigi1997/udagram-reverseproxy
   # Push
   # Assuming dockerhub_password and dockerhub_username are set in the Travis repository settings
   # login to docker hub
   - echo "$dockerhub_password" | docker login -u "$dockerhub_username" --password-stdin
   # push udagram-api-feed
-  - docker push letanhai1998/udagram-api-feed:v1
+  - docker push maynoigi1997/udagram-api-feed:v1
   # push udagram-api-user
-  - docker push letanhai1998/udagram-api-user:v1
+  - docker push maynoigi1997/udagram-api-user:v1
   # push udagram-frontend
-  - docker push letanhai1998/udagram-frontend:v1
+  - docker push maynoigi1997/udagram-frontend:v1
   # push udagram-reverseproxy
-  - docker push letanhai1998/udagram-reverseproxy
+  - docker push maynoigi1997/udagram-reverseproxy

@@ -16,7 +16,7 @@ script:
   # Tagging for api-user
   - docker tag udagram-api-user maynoigi1997/udagram-api-user:v1
   # Tagging for api-frontend
-  - docker tag udagram-frontend maynoigi1997/udagram-frontend:v1
+  - docker tag udagram-frontend maynoigi1997/udagram-frontend:v2
   # Tagging for api-reverseproxy
   - docker tag udagram-reverseproxy maynoigi1997/udagram-reverseproxy
   # Push
@@ -28,6 +28,6 @@ script:
   # push udagram-api-user
   - docker push maynoigi1997/udagram-api-user:v1
   # push udagram-frontend
-  - docker push maynoigi1997/udagram-frontend:v1
+  - docker push maynoigi1997/udagram-frontend:v2
   # push udagram-reverseproxy
   - docker push maynoigi1997/udagram-reverseproxy

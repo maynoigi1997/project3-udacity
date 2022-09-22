@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: frontend-app
-        image: maynoigi1997/udagram-frontend:v1
+        image: maynoigi1997/udagram-frontend:v2
         resources:
           limits:
             memory: "128Mi"
